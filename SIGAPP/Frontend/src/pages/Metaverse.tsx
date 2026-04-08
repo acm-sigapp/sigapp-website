@@ -115,33 +115,6 @@ const MetaversePage = () => {
           </div>
         </motion.div>
 
-        {/* Game Demo Video Section */}
-        <motion.div className="mb-8" variants={cardVariants}>
-          <h3 className="text-3xl md:text-4xl font-semibold mb-6 text-center text-cyan-400">Game Demo Video</h3>
-          <div className="bg-gradient-to-r from-red-900/30 to-orange-900/30 border border-red-500/30 rounded-xl p-6">
-            <div className="text-center mb-6">
-              <p className="text-gray-300 mb-4 text-lg">
-                Watch the Spy Fiction gameplay demo to see the stealth action in action!
-              </p>
-            </div>
-            <div className="flex justify-center">
-              <div className="w-full max-w-4xl">
-                <div className="relative overflow-hidden rounded-lg border border-gray-700/50 shadow-2xl">
-                  <video
-                    controls
-                    className="w-full h-auto rounded-lg"
-                    poster="/logo_1.png"
-                    preload="metadata"
-                  >
-                    <source src="/game spy fiction.mp4" type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
-                </div>
-              </div>
-            </div>
-          </div>
-        </motion.div>
-
         {/* Game Card */}
         <motion.div
           className="max-w-4xl mx-auto bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-lg rounded-2xl p-8 border border-gray-700/50 shadow-2xl"
@@ -217,6 +190,26 @@ const MetaversePage = () => {
           <div className="mb-8">
             <h3 className="text-2xl font-semibold mb-4 text-cyan-400">Game Screenshots</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              <motion.div
+                className="relative group"
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.3 }}
+              >
+                <video
+                  controls
+                  className="w-full h-48 object-cover rounded-lg border border-gray-700/50 shadow-lg group-hover:shadow-purple-500/20 transition-shadow duration-300"
+                  poster="/logo_1.png"
+                  preload="metadata"
+                >
+                  <source src="/game spy fiction.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg flex items-end justify-center pb-4">
+                  <span className="text-white text-sm font-medium bg-black/70 px-3 py-1 rounded-full">
+                    Game Demo Video
+                  </span>
+                </div>
+              </motion.div>
               {gameInfo.images.map((image, index) => (
                 <motion.div
                   key={index}
