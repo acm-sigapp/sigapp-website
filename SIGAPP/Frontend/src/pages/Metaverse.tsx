@@ -63,17 +63,6 @@ const MetaversePage = () => {
         initial="hidden"
         animate="visible"
       >
-        {/* Back to Home Button - Top */}
-        <motion.div className="text-left mb-8" variants={cardVariants}>
-          <Button
-            onClick={() => navigate('/')}
-            variant="outline"
-            className="border-gray-600 text-gray-300 hover:bg-gray-800 hover:text-white px-4 py-2 rounded-full text-sm"
-          >
-            ← Back to Home
-          </Button>
-        </motion.div>
-
         {/* Header */}
         <motion.div className="text-center mb-12" variants={cardVariants}>
           <div className="flex justify-center items-center mb-6">
@@ -226,17 +215,6 @@ const MetaversePage = () => {
               View on itch.io
             </Button>
           </div>
-        </motion.div>
-
-        {/* Back Button */}
-        <motion.div className="text-center mt-12" variants={cardVariants}>
-          <Button
-            onClick={() => navigate('/')}
-            variant="outline"
-            className="border-gray-600 text-gray-300 hover:bg-gray-800 hover:text-white px-6 py-2 rounded-full"
-          >
-            ← Back to Home
-          </Button>
         </motion.div>
       </motion.div>
     </div>
