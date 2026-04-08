@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import Events from "./pages/Events";
 import GalleryPage from "./pages/Gallery";
 import CertificatesPage from "./pages/Certificates";
+import MetaversePage from "./pages/Metaverse";
 import NotFound from "./pages/NotFound";
 import CustomCursor from "./components/CustomCursor"; // import global cursor
 
@@ -24,6 +25,7 @@ const App = () => (
           <Route path="/events" element={<Events />} />
           <Route path="/gallery" element={<GalleryPage />} />
           <Route path="/certificates" element={<CertificatesPage />} />
+          <Route path="/metaverse" element={<MetaversePage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
