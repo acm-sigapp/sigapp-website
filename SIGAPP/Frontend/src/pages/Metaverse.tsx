@@ -86,6 +86,62 @@ const MetaversePage = () => {
           </p>
         </motion.div>
 
+        {/* Play Game Online Section */}
+        <motion.div className="mb-8" variants={cardVariants}>
+          <h3 className="text-3xl md:text-4xl font-semibold mb-6 text-center text-cyan-400">Play Game Online</h3>
+          <div className="bg-gradient-to-r from-purple-900/30 to-cyan-900/30 border border-purple-500/30 rounded-xl p-6">
+            <div className="text-center mb-6">
+              <p className="text-gray-300 mb-4 text-lg">
+                Experience Spy Fiction directly in your browser! Play Now.
+              </p>
+            </div>
+            <div className="flex justify-center">
+              <div className="w-full max-w-4xl">
+                <div className="relative overflow-hidden rounded-lg border border-gray-700/50 shadow-2xl">
+                  <iframe
+                    frameBorder="0"
+                    src="https://itch.io/embed-upload/17085453?color=2f2f2f"
+                    allowFullScreen
+                    width="100%"
+                    height="620"
+                    className="w-full h-[620px] md:h-[500px] lg:h-[620px]"
+                    title="Spy Fiction Game"
+                  >
+                    <a href="https://ankit-mandal006.itch.io/spy-fiction">Play Spy-Fiction (Demo) on itch.io</a>
+                  </iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Game Demo Video Section */}
+        <motion.div className="mb-8" variants={cardVariants}>
+          <h3 className="text-3xl md:text-4xl font-semibold mb-6 text-center text-cyan-400">Game Demo Video</h3>
+          <div className="bg-gradient-to-r from-red-900/30 to-orange-900/30 border border-red-500/30 rounded-xl p-6">
+            <div className="text-center mb-6">
+              <p className="text-gray-300 mb-4 text-lg">
+                Watch the Spy Fiction gameplay demo to see the stealth action in action!
+              </p>
+            </div>
+            <div className="flex justify-center">
+              <div className="w-full max-w-4xl">
+                <div className="relative overflow-hidden rounded-lg border border-gray-700/50 shadow-2xl">
+                  <video
+                    controls
+                    className="w-full h-auto rounded-lg"
+                    poster="/logo_1.png"
+                    preload="metadata"
+                  >
+                    <source src="/game spy fiction.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+
         {/* Game Card */}
         <motion.div
           className="max-w-4xl mx-auto bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-lg rounded-2xl p-8 border border-gray-700/50 shadow-2xl"
@@ -190,30 +246,22 @@ const MetaversePage = () => {
               <div className="text-center">
                 <div className="inline-flex items-center gap-2 bg-green-500/20 text-green-400 px-4 py-2 rounded-full text-sm font-semibold mb-4">
                   <Download className="w-4 h-4" />
-                  Spy Fiction Game - In Development Phase
+                  Spy Fiction Game - PC Version
                 </div>
                 <p className="text-gray-300 mb-6 leading-relaxed">
-                  Download and try out the Spy Fiction game currently in development. Experience the stealth-driven gameplay as Agent 67 in this thrilling spy adventure demo.
+                  Download the complete PC version for the full experience. Perfect for offline play with enhanced graphics and performance.
                 </p>
-                <Button
-                  onClick={() => window.open('/Spy-Fiction_PC_BUILD (Demo).zip', '_blank')}
-                  className="bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600 text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-green-500/25"
-                >
-                  <Download className="w-5 h-5 mr-2" />
-                  Download Now
-                </Button>
+                <div className="flex justify-center">
+                  <Button
+                    onClick={() => window.open('/Spy-Fiction_PC_BUILD (Demo).zip', '_blank')}
+                    className="bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600 text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-green-500/25"
+                  >
+                    <Download className="w-5 h-5 mr-2" />
+                    Download PC Version
+                  </Button>
+                </div>
               </div>
             </div>
-          </div>
-
-          <div className="text-center">
-            <Button
-              onClick={() => window.open(gameInfo.link, '_blank')}
-              className="bg-gradient-to-r from-purple-500 to-cyan-500 hover:from-purple-600 hover:to-cyan-600 text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105"
-            >
-              <ExternalLink className="w-5 h-5 mr-2" />
-              View on itch.io
-            </Button>
           </div>
         </motion.div>
       </motion.div>
