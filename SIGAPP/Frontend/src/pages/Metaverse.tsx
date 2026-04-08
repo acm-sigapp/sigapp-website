@@ -96,15 +96,15 @@ const MetaversePage = () => {
               </p>
             </div>
             <div className="flex justify-center">
-              <div className="w-full max-w-4xl">
-                <div className="relative overflow-hidden rounded-lg border border-gray-700/50 shadow-2xl">
+              <div className="w-full lg:max-w-6xl">
+                <div className="relative overflow-hidden rounded-lg border border-gray-700/50 shadow-2xl" style={{ aspectRatio: '16 / 9' }}>
                   <iframe
                     frameBorder="0"
                     src="https://itch.io/embed-upload/17085453?color=2f2f2f"
                     allowFullScreen
                     width="100%"
-                    height="620"
-                    className="w-full h-[620px] md:h-[500px] lg:h-[620px]"
+                    height="100%"
+                    className="w-full h-full"
                     title="Spy Fiction Game"
                   >
                     <a href="https://ankit-mandal006.itch.io/spy-fiction">Play Spy-Fiction (Demo) on itch.io</a>
@@ -197,11 +197,11 @@ const MetaversePage = () => {
               >
                 <video
                   controls
-                  className="w-full h-48 object-cover rounded-lg border border-gray-700/50 shadow-lg group-hover:shadow-purple-500/20 transition-shadow duration-300"
+                  className="w-full h-48 object-contain rounded-lg border border-gray-700/50 shadow-lg group-hover:shadow-purple-500/20 transition-shadow duration-300"
                   poster="/logo_1.png"
                   preload="metadata"
                 >
-                  <source src="/game spy fiction.mp4" type="video/mp4" />
+                  <source src="/game-spy-fiction.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg flex items-end justify-center pb-4">
