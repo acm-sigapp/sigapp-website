@@ -32,18 +32,11 @@ const Header = () => {
             transition={{ duration: 0.2 }}
             className="flex items-center space-x-2"
           >
-            {/* First Logo */}
+            {/* Logo */}
             <img
-              src="/srm.webp"
-              alt="Logo 1"
-              className="h-8 w-8 object-contain"
-            />
-
-            {/* Second Logo */}
-            <img
-              src="/logo.jpg"
-              alt="Logo 2"
-              className="h-8 w-8 object-contain"
+              src="/logo_1.png"
+              alt="ACM SIGAPP Logo"
+              className="h-24 w-24 object-contain"
             />
 
             {/* Title */}
